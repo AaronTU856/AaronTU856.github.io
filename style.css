@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
 :root {
-  --ink: #17212b;
-  --muted: #586776;
-  --line: #dbe3e8;
-  --paper: #f7faf9;
+  --ink: #172b49;
+  --muted: #506079;
+  --line: #dbe3ef;
+  --paper: #f7f9fd;
   --white: #ffffff;
   --accent: #0f766e;
   --accent-dark: #115e59;
@@ -342,3 +342,26 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
   .hero-with-portrait { grid-template-columns: 1fr; grid-template-areas: "portrait" "copy"; gap: 2.5rem; }
   .portrait-frame { width: 180px; justify-self: start; }
 }
+
+/* Colour and button refresh */
+body { background: radial-gradient(ellipse at 95% 3%, #dcefeb 0, transparent 30rem), var(--paper); }
+.site-header { background: #172b49; border-bottom: 3px solid #dfb16c; }
+.brand, .nav-links a { color: #ffffff; }
+.nav-links a:hover, .nav-links a:focus { color: #8de0d1; }
+h1 { color: #172b49; }
+#experience { background: #eaf0f8; }
+#skills { background: #ffffff; }
+#beyond-work { background: #fbf0df; }
+.skill-card, .project-card, .experience-card { border-radius: 14px; box-shadow: 0 6px 22px rgba(23,43,73,0.045); }
+.project-card { border-top: 4px solid #0f766e; }
+.project-card:nth-child(2) { border-top-color: #315d9c; }
+.project-card:nth-child(3) { border-top-color: #ad7132; }
+.project-card:nth-child(4) { border-top-color: #7560a3; }
+.skill-card { background: #f3f7fc; border-top: 3px solid #315d9c; }
+.experience-card { border-left: 4px solid #315d9c; }
+.experience-card:nth-child(2) { border-left-color: #ad7132; }
+.button { border-radius: 8px; text-align: center; line-height: 1.5; }
+.button-secondary { background: #ffffff; }
+.project-card > .button { align-self: flex-start; }
+.contact-section { background: #172b49; border-top: 4px solid #dfb16c; }
+.portrait-frame { box-shadow: 12px 12px 0 #dcefeb, 0 18px 38px rgba(23,43,73,0.12); }
