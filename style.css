@@ -333,12 +333,12 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* Framed profile portrait */
-.hero-with-portrait { display: grid; grid-template-columns: minmax(0, 1fr) 240px; align-items: center; gap: 4rem; }
-.hero-copy { min-width: 0; }
-.portrait-frame { position: relative; margin: 0; padding: 10px; border: 1px solid #a8cbc5; border-radius: 28px; background: var(--white); box-shadow: 12px 12px 0 var(--accent-soft), 0 18px 38px rgba(23, 33, 43, 0.1); }
+.hero-with-portrait { display: grid; grid-template-columns: minmax(0, 1fr) 240px; grid-template-areas: "copy portrait"; align-items: center; gap: 4rem; }
+.hero-copy { grid-area: copy; min-width: 0; }
+.portrait-frame { grid-area: portrait; position: relative; margin: 0; padding: 10px; border: 1px solid #a8cbc5; border-radius: 28px; background: var(--white); box-shadow: 12px 12px 0 var(--accent-soft), 0 18px 38px rgba(23, 33, 43, 0.1); }
 .portrait-frame::before { content: ""; position: absolute; inset: -8px; border: 1px solid #c6dfd9; border-radius: 34px; pointer-events: none; }
 .portrait-frame img { display: block; width: 100%; height: auto; border-radius: 18px; }
 @media (max-width: 760px) {
-  .hero-with-portrait { grid-template-columns: 1fr; gap: 2.5rem; }
-  .portrait-frame { grid-row: 1; width: 180px; justify-self: start; }
+  .hero-with-portrait { grid-template-columns: 1fr; grid-template-areas: "portrait" "copy"; gap: 2.5rem; }
+  .portrait-frame { width: 180px; justify-self: start; }
 }
